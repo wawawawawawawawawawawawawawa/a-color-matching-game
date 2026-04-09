@@ -193,7 +193,7 @@ class ColorMatchGame:
             result_text = self.font.render(f"Match: {similarity}%", True, (255, 255, 255))
             self.screen.blit(result_text, (self.WIDTH//2 - result_text.get_width()//2, 380))
 
-            msg = "Excellent!" if similarity > 90 else "Pretty good!" if similarity > 70 else "Not bad" if similarity > 50 else "Try again"
+            msg = "are u a wizard?" if similarity > 90 else "okay now we talking" if similarity > 80 else "that's kinda okay" if similarity > 70 else "get your eyes checked" if similarity > 50 else "u know what turn this game off"
             color = (0, 255, 0) if similarity > 70 else (255, 200, 0)
             msg_text = self.font.render(msg, True, color)
             self.screen.blit(msg_text, (self.WIDTH//2 - msg_text.get_width()//2, 440))
