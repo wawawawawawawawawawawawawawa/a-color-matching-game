@@ -3,7 +3,6 @@ import random
 import sys
 import math
 
-# SLIDER CLASS
 class Slider:
     def __init__(self, y, name, initial_value=128):
         self.y = y
@@ -25,8 +24,6 @@ class Slider:
         val = (mouse_x - self.x) / self.width * 255
         self.value = max(0, min(255, int(val)))
 
-
-# BUTTON CLASS
 class Button:
     def __init__(self, x, y, width, height, text):
         self.rect = pygame.Rect(x, y, width, height)
@@ -45,8 +42,6 @@ class Button:
     def is_clicked(self, mouse_pos):
         return self.rect.collidepoint(mouse_pos)
 
-
-# MAIN GAME CLASS
 class ColorMatchGame:
     TOTAL_ROUNDS = 3
     MEMORIZE_SECONDS = 5
